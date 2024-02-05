@@ -1,0 +1,85 @@
+<html>
+    <head>
+    <style>
+        body {
+            background-color:beige;
+        }
+    #container {
+    position: absolute;
+    margin: auto;
+    width: 99vw;
+    height: 80pt;
+    top: 0;
+    bottom: 75%;
+    background-color:beige
+
+    filter: url(#threshold) blur(0.6px);
+}
+
+#text1,
+#text2 {
+    position: absolute;
+    width: 100%;
+    display: inline-block;
+
+    font-family: "Raleway", sans-serif;
+    font-size: 80pt;
+
+    text-align: center;
+
+    user-select: none;
+}
+
+.box {
+  width: 1683px;
+  height: 928px;
+  background: url(https://upload.wikimedia.org/wikipedia/commons/f/f1/Heart_coraz%C3%B3n.svg);
+  background-color:beige;
+  background-size: 20px;
+  background-repeat: round;
+  overflow: hidden;
+  resize: both;
+  position: relative;
+  min-width: 150px;
+  min-height: 55px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: white;
+  }
+  
+  display: grid;
+  place-items: center;
+  span {
+    position: absolute;
+  }
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+}
+    </style>
+        <script src="LeviLetter.js"></script>
+    </head>
+<div class="box">
+  <span></span>
+</div>
+<body onload="abc()">
+ 
+<div id="container">
+    <span id="text1"></span>
+    <span id="text2"></span>
+</div>
+<a href="Yippee!.html" style="position:absolute;text-align:center;left:550px">
+<button style="background-color:green;font-size:100px;">Yes!</button>
+</a>
+<button style="position:absolute;text-align:center;right:550px;background-color:red;font-size:100px;" id="no" onmouseover="NuhUh()">NO.</button>
+</body>
+</html>
